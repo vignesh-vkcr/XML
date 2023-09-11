@@ -22,7 +22,10 @@ print(root.tag)
 
 # Access elements and attributes
 for book in root:
-    title = book.find('title').text
-    author = book.find('author').text
-    price = book.find('price').text
-    print(f"Title: {title}, Author: {author}, Price: {price}")
+    print(book.tag)
+    #title = book.find('title').text
+    #author = book.find('author').text
+    #price = book.find('price').text
+    #print(f"Title: {title}, Author: {author}, Price: {price}")
+    for element in book:
+        print(element.tag +":"+ element.text)
